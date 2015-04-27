@@ -1,0 +1,7 @@
+<h1>Image Index</h1>
+
+<% @images.each do |image| %>
+<h4><%= image.title %></h4>
+<p><%=image_tag image.avatar.url(:medium)%></br>
+  <%= link_to("Delete Image", admin_image_path(image), method: "delete") %></p>
+<% end %>

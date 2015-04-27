@@ -1,0 +1,8 @@
+<h1>Idea Index</h1>
+
+<%= flash[:message] %>
+<% @ideas.each do |idea| %>
+<ul>
+  <li><%= link_to(idea.title, idea_path(idea)) %></li>
+</ul>
+<% end %>

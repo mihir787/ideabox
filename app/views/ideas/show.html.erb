@@ -1,0 +1,15 @@
+<%= flash[:message] %>
+
+<h3>Name:</h3>
+<%= @idea.title %>
+<h3>Description:</h3>
+<%= @idea.description %>
+<h3>Category:</h3>
+<%= @idea.category.name %>
+
+<div class="links">
+  
+<%= link_to('Idea Index', ideas_path) %> |
+<%= link_to('Edit', edit_idea_path(@idea)) %> |
+<%= link_to('Delete', idea_path(@idea), method: "delete") %> |
+</div>
